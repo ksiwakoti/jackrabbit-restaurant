@@ -1,0 +1,107 @@
+.Defult-Menu-login-Div{
+  background-color: #fff;
+  border-radius: 9px;
+  height: 250px;
+  width: 250px;
+  border: 0px solid #3CAFF2;
+  margin: auto;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerBox{
+  flex: 0.2;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerTitleBox{
+  display: flex;
+  align-items: center;
+  border-radius: 6px 0px 0px 0px;
+  border: 6px solid #3CAFF2;
+  border-width: 2px 0px 2px 2px;
+  flex: 4;
+
+  color: #3CAFF2;
+  font-weight: bold;
+  text-align: center;
+}
+
+.h3header{
+    margin-left: 40%;
+}
+
+.headerCancelBox{
+  display: flex;
+  align-items: center;
+  border-radius: 0px 0px 2px 0px;
+  border: 0px solid #3CAFF2;
+  border-width: 2px 0px 2px 2px;
+  flex: 1;
+
+  color: #3CAFF2;
+  text-align: center;
+  font-weight: bold;
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+}
+
+.headerCancelBox:hover{
+  background-color: #3CAFF2;
+  border-radius: 0px 0px 2px 0px;
+  border: 0px solid #3CAFF2;
+  border-width: 2px 0px 2px 2px;
+  flex: 1;
+
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mainBox{
+  display: flex;
+  flex:1;
+  align-items: center;
+  border: 0px solid #3CAFF2;
+  border-width: 0px 0px 0px 2px;
+}
+
+.formSignin{
+  margin: 33px auto auto auto;
+  border-width: 2px 2px 2px 2px;
+}
+
+.labelInput{
+    color: #3CAFF2;
+    font-weight: bold;
+}
+
+.loginButton{
+  margin: 5px auto auto auto;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  color: #3CAFF2;
+  border: 2px solid #3CAFF2;
+  border-radius: 4px;
+  background: #FFF;
+  width: 90px;
+  height: 20px;
+}
+
+.loginButton:hover {
+  margin: 5px auto auto auto;
+  color: #FFF;
+  border: 2px solid #3CAFF2;
+  border-radius: 4px;
+  background: #3CAFF2;
+  width: 90px;
+  height: 20px;
+}
+
+.loginInputBox{
+  border: 2px solid #3CAFF2;
+}
