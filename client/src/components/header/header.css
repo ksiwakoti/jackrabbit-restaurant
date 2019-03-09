@@ -83,3 +83,9 @@
   width: 120px;
   height: 30px;
 }
+
+.welcomingMessege{
+  color: #FFF;
+  margin: auto;
+  font-weight: bold;
+}

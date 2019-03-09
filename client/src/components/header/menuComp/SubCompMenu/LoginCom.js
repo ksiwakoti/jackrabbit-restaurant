@@ -7,7 +7,21 @@ import {connect} from 'react-redux';
 
 class loginCom extends Component {
 
+    state = {
+      usernameInput: null,
+      passwordInput: null
+    }
+
+    handleInputChange = (e) => {
+      e.preventDefault()
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    }
+
     render() {
+      const {usernameInput} = this.state
+      const {passwordInput} = this.state
       return (
         <div>
           <div className="Defult-Menu-login-Div">
@@ -24,16 +38,22 @@ class loginCom extends Component {
                 <label className="labelInput">
                   username
                   <br />
-                  <input className="loginInputBox" type="text" name="username" />
+                  <input className="loginInputBox" onChange={this.handleInputChange} type="text" name="usernameInput" />
                 </label>
                 <label className="labelInput">
                   <br />
                     password
                   <br />
-                  <input  className="loginInputBox" type="text" name="username" />
+                  <input  className="loginInputBox" onChange={this.handleInputChange} type="password" name="passwordInput" />
                 </label>
                 <br />
-                <button className="loginButton">Login</button>
+                <a className="SignInFailureMessege">{this.props.SingInfailureMessege}</a>
+                <button 
+                  type="button"
+                  className="loginButton" 
+                  onClick={() => this.props.LoginClickHandle(this.state.usernameInput, this.state.passwordInput)}>
+                    Login
+                </button>
               </form>
             </div>
           </div>
@@ -46,12 +66,16 @@ const mapDispachToProps = (dispach) => {
   return {
     CencelLogin: () =>{
       dispach({type: "CANCEL_SIGNIN_FORM"})
+    },
+    LoginClickHandle: ( usernameInput, passwordInput) =>{
+      dispach({type: "SIGNIN_CLICK", usernameInput, passwordInput})
     }
   }
 }
 
 const mapStateToProps = (state) => {
   return {
+    SingInfailureMessege: state.SingInfailureMessege
   }
 }
 

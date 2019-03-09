@@ -87,6 +87,7 @@
   color: #3CAFF2;
   border: 2px solid #3CAFF2;
   border-radius: 4px;
+  display: block;
   background: #FFF;
   width: 90px;
   height: 20px;
@@ -104,4 +105,12 @@
 
 .loginInputBox{
   border: 2px solid #3CAFF2;
+  color: #3CAFF2;
+}
+
+.SignInFailureMessege{
+  margin: 2px;
+  color: red;
+  display: block;
+  font-size: 10px;
 }

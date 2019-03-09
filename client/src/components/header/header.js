@@ -4,6 +4,8 @@ import logo from './img/icon.png';
 import './header.css';
 import HeaderBottom from './headerBottom.js';
 
+//redux thingy
+import {connect} from 'react-redux';
 
 class HeaderDiv extends Component {
 
@@ -20,6 +22,7 @@ class HeaderDiv extends Component {
             </div>
             <div className="rightDiv">
               <div className="UserRegisterDiv">
+              { this.props.isSignIn === false ?
                 <div className="buttomRegisterDiv">
                   <div className="singinDiv">
                     <HeaderBottom name="SIGN IN" />
@@ -28,6 +31,7 @@ class HeaderDiv extends Component {
                     <HeaderBottom name="SIGN UP"/>
                   </div>
                 </div>
+              :  (<a className="welcomingMessege"> Welcome Back, {this.props.username}! </a>)}
               </div>
               <div className="RightDivBottom">
                 <Menu />
@@ -38,4 +42,17 @@ class HeaderDiv extends Component {
     }
 }
 
-export default (HeaderDiv);
+
+const mapDispachToProps = (dispach) => {
+  return {
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    username: state.username,
+    isSignIn: state.isSignIn
+  }
+}
+
+export default connect(mapStateToProps, mapDispachToProps) (HeaderDiv);
